@@ -1,6 +1,7 @@
 import streamlit as st
+import barcode
 import pandas as pd
-from barcode import Code128
+from barcode.codex import Code128
 from barcode.writer import ImageWriter
 from io import BytesIO
 
@@ -11,7 +12,6 @@ st.set_page_config(
     layout="centered",  # Forma de layout ancho o compacto
     initial_sidebar_state="expanded"  # Definimos si el sidebar aparece expandido o colapsado
 )
-
 gsheetid = '16iIKA3O-7RyyMyN-uQuGy1vpA9eQ1KkReeq97ISy_Jw'
 sheetid = '0'
 url = f'https://docs.google.com/spreadsheets/d/{gsheetid}/export?format=csv&gid={sheetid}&format'
